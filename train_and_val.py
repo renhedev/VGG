@@ -104,17 +104,15 @@ def train():
     
  
  
-train()
+#train()
 
     
 #%%   Test the accuracy on test dataset. got about 85.69% accuracy.
 import math
 def evaluate():
     with tf.Graph().as_default():
-        
-#        log_dir = 'C://Users//kevin//Documents//tensorflow//VGG//logsvgg//train//'
-        log_dir = 'D:/CIFAR10_VGG/logs/train/'#训练日志
-        test_dir = 'D:/CIFAR10_VGG/logs/val/'
+        log_dir = 'E:/图像/资料/目标检测/VGG16_CIFAR-master/logs/train/'#训练日志
+        test_dir = 'E:/图像/资料/目标检测/VGG16_CIFAR-master/cifar10数据集/cifar-10-batches-bin/'
         n_test = 10000
                 
         images, labels = input_data.read_cifar10(data_dir=test_dir,
@@ -161,3 +159,4 @@ def evaluate():
                 coord.join(threads)
                 
 #%%
+evaluate()
